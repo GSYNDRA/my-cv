@@ -3,110 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Nguyen Hoang Giang - CV</title>
-  <style>
-    :root {
-      --bg: #f3f5f7;
-      --card: #ffffff;
-      --text: #1f2933;
-      --muted: #52606d;
-      --line: #d9e2ec;
-      --btn: #0b5cab;
-      --btn-hover: #084b8c;
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      color: var(--text);
-      background: var(--bg);
-    }
-
-    .wrap {
-      max-width: 1080px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    .header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      margin-bottom: 14px;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: 20px;
-      font-weight: 700;
-    }
-
-    .hint {
-      margin: 2px 0 0;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .actions {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-block;
-      border: 1px solid var(--btn);
-      background: var(--btn);
-      color: #fff;
-      text-decoration: none;
-      padding: 8px 12px;
-      border-radius: 8px;
-      font-size: 14px;
-      font-weight: 600;
-    }
-
-    .btn:hover { background: var(--btn-hover); border-color: var(--btn-hover); }
-
-    .viewer {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      overflow: hidden;
-      height: calc(100vh - 130px);
-      min-height: 520px;
-    }
-
-    .viewer iframe {
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
-
-    @media (max-width: 720px) {
-      .header { flex-direction: column; align-items: flex-start; }
-      .viewer { height: 72vh; min-height: 420px; }
-    }
-  </style>
+  <title>Redirecting to CV PDF</title>
+  <meta http-equiv="refresh" content="0; url=main.pdf" />
 </head>
 <body>
-  <main class="wrap">
-    <section class="header">
-      <div>
-        <h1>NGUYEN HOANG GIANG - Curriculum Vitae</h1>
-        <p class="hint">If the PDF preview does not load, use the buttons to open or download it.</p>
-      </div>
-      <div class="actions">
-        <a class="btn" href="main.pdf" target="_blank" rel="noopener">Open PDF</a>
-        <a class="btn" href="main.pdf" download>Download PDF</a>
-      </div>
-    </section>
-
-    <section class="viewer">
-      <iframe src="main.pdf#view=FitH" title="CV PDF Preview"></iframe>
-    </section>
-  </main>
+  <p>Redirecting to your CV PDF...</p>
+  <p><a href="main.pdf">Open main.pdf</a></p>
+  <script>
+    window.location.replace("main.pdf");
+  </script>
 </body>
 </html>
