@@ -1,0 +1,76 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[a4paper,margin=1.4cm]{geometry}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage{lmodern}
+\else
+  \usepackage{fontspec}
+  \IfFontExistsTF{Times New Roman}
+    {\setmainfont{Times New Roman}}
+    {\setmainfont{TeX Gyre Termes}}
+\fi
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{parskip}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{titlesec}
+
+\input{data/personal}
+
+\definecolor{accent}{HTML}{0F4C81}
+\hypersetup{
+  colorlinks=true,
+  urlcolor=accent,
+  linkcolor=accent
+}
+
+\setcounter{secnumdepth}{0}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlist[itemize]{leftmargin=1.3em,itemsep=2pt,topsep=3pt}
+
+\titleformat{\section}
+  {\Large\bfseries\color{accent}}
+  {}
+  {0pt}
+  {}
+\titlespacing*{\section}{0pt}{10pt}{5pt}
+
+\newcommand{\contactsep}{\hspace{0.5em}\textbar\hspace{0.5em}}
+\newcommand{\sectiondivider}{\par\vspace{6pt}\noindent\rule{\textwidth}{0.8pt}\par\vspace{8pt}}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE\textbf{\FullName}}\\[4pt]
+  {\large \TargetRole}\\[7pt]
+  \href{tel:\PhoneRaw}{\PhoneDisplay}
+  \contactsep
+  \href{mailto:\Email}{\Email}
+  \contactsep
+  \href{\GithubURL}{GitHub}
+  \ifdefempty{\PortfolioURL}{}{
+    \contactsep
+    \href{\PortfolioURL}{Portfolio}
+  }
+\end{center}
+
+\input{sections/01_objective}
+\sectiondivider
+\input{sections/03_technical_skills}
+\sectiondivider
+\input{sections/03a_experience}
+\sectiondivider
+\input{sections/04_projects}
+\sectiondivider
+\input{sections/05_education_awards}
+\sectiondivider
+\input{sections/06_soft_skills}
+
+\end{document}
